@@ -6,9 +6,6 @@ import { Theme } from "./util/theme"
 export type Analytics =
   | null
   | {
-      provider: "plausible"
-    }
-  | {
       provider: "google"
       tagId: string
     }

@@ -4,8 +4,6 @@ import { QuartzEmitterPlugin } from "../types"
 // @ts-ignore
 import spaRouterScript from "../../components/scripts/spa.inline"
 // @ts-ignore
-import plausibleScript from "../../components/scripts/plausible.inline"
-// @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
 import styles from "../../styles/base.scss"
 import popoverStyle from "../../components/styles/popover.scss"
@@ -94,17 +92,14 @@ function addGlobalPageResources(
           page_location: location.href,
         });
       });`)
-  } else if (cfg.analytics?.provider === "plausible") {
-    componentResources.afterDOMLoaded.push(plausibleScript)
   } else if (cfg.analytics?.provider === "umami") {
-    componentResources.afterDOMLoaded.push(`
-      const umamiScript = document.createElement("script")
-      umamiScript.src = "https://analytics.umami.is/script.js"
-      umamiScript["data-website-id"] = "${cfg.analytics.websiteId}"
-      umamiScript.async = true
-  
-      document.head.appendChild(umamiScript)
-    `)
+    // componentResources.afterDOMLoaded.push(`
+    //   const umamiScript = document.createElement("script")
+    //   umamiScript.src = "https://analytics.umami.is/script.js"
+    //   umamiScript["data-website-id"] = "${cfg.analytics.websiteId}"
+    //   umamiScript.async = true
+    //   document.head.appendChild(umamiScript)
+    // `)
   }
 
   if (cfg.enableSPA) {

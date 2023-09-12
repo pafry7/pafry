@@ -26,12 +26,18 @@ export default (() => {
         <meta name="generator" content="Quartz" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+
         {css.map((href) => (
           <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
         ))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
+        <script
+          src="https://analytics.umami.is/script.js"
+          data-website-id="8518e054-f12a-42ed-84bb-ab1cd5dc6ad3"
+          async
+        ></script>
       </head>
     )
   }

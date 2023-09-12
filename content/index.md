@@ -1,5 +1,5 @@
 ---
-title: Index
+title: Patryk Fryda
 ---
 
 <div class="header">

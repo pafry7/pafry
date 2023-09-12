@@ -50,6 +50,7 @@ const renderIndexPage = (
   slug: FullSlug,
   componentData: QuartzComponentProps,
   components: RenderComponents,
+  pageResources: StaticResources,
 ) => {
   const { head: Head, pageBody: Content } = components
 
@@ -66,6 +67,9 @@ const renderIndexPage = (
           </Body>
         </div>
       </body>
+      {pageResources.js
+        .filter((resource) => resource.loadTime === "afterDOMReady")
+        .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
 }

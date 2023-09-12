@@ -6,12 +6,13 @@ const config: QuartzConfig = {
     pageTitle: "🪴 pafry's garden",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-    baseUrl: "",
+    baseUrl: "pafry7.github.io",
+    analytics: {
+      provider: "umami",
+      websiteId: "8518e054-f12a-42ed-84bb-ab1cd5dc6ad3",
+    },
     theme: {
       typography: {
         header: "Schibsted Grotesk",
