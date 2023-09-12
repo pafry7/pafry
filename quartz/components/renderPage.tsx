@@ -46,12 +46,36 @@ export function pageResources(slug: FullSlug, staticResources: StaticResources):
   }
 }
 
-export function renderPage(
+const renderIndexPage = (
+  slug: FullSlug,
+  componentData: QuartzComponentProps,
+  components: RenderComponents,
+) => {
+  const { head: Head, pageBody: Content } = components
+
+  const Body = BodyConstructor()
+  return (
+    <html>
+      <Head {...componentData} />
+      <body data-slug={slug}>
+        <div id="quartz-root" class="index-page">
+          <Body {...componentData}>
+            <div class="center">
+              <Content {...componentData} />
+            </div>
+          </Body>
+        </div>
+      </body>
+    </html>
+  )
+}
+
+const renderContentPage = (
   slug: FullSlug,
   componentData: QuartzComponentProps,
   components: RenderComponents,
   pageResources: StaticResources,
-): string {
+) => {
   const {
     head: Head,
     header,
@@ -80,7 +104,7 @@ export function renderPage(
     </div>
   )
 
-  const doc = (
+  return (
     <html>
       <Head {...componentData} />
       <body data-slug={slug}>
@@ -112,6 +136,16 @@ export function renderPage(
         .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
+}
+
+export function renderPage(
+  slug: FullSlug,
+  componentData: QuartzComponentProps,
+  components: RenderComponents,
+  pageResources: StaticResources,
+): string {
+  const renderFunc = slug === "index" ? renderIndexPage : renderContentPage
+  const doc = renderFunc(slug, componentData, components, pageResources)
 
   return "<!DOCTYPE html>\n" + render(doc)
 }

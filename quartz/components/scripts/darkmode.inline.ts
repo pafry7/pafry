@@ -15,9 +15,11 @@ document.addEventListener("nav", () => {
 
   // Darkmode toggle
   const toggleSwitch = document.querySelector("#darkmode-toggle") as HTMLInputElement
-  toggleSwitch.removeEventListener("change", switchTheme)
-  toggleSwitch.addEventListener("change", switchTheme)
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true
+  if (toggleSwitch) {
+    toggleSwitch.removeEventListener("change", switchTheme)
+    toggleSwitch.addEventListener("change", switchTheme)
+    if (currentTheme === "dark") {
+      toggleSwitch.checked = true
+    }
   }
 })

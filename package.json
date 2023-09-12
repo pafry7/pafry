@@ -1,12 +1,11 @@
 {
-  "name": "@jackyzha0/quartz",
+  "name": "pafry",
   "description": "🌱 publish your digital garden and notes as a website",
   "private": true,
   "version": "4.0.10",
   "type": "module",
-  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",
-  "homepage": "https://quartz.jzhao.xyz",
+  "homepage": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/jackyzha0/quartz.git"
@@ -104,5 +103,8 @@
     "prettier": "^3.0.0",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4"
+  },
+  "volta": {
+    "node": "18.14.2"
   }
 }

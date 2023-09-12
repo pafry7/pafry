@@ -1,1 +1,88 @@
 // put your custom CSS here!
+@use "./variables.scss" as *;
+
+.left {
+  display: grid !important;
+  gap: 1.5rem !important;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content min-content;
+  align-items: center;
+
+  .page-title {
+    grid-area: 1 / 1 / 2 / 3;
+ @media all and (max-width: $mobileBreakpoint) {
+  font-size: 14px;
+    }
+  }
+
+  .search {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .darkmode {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .toc {
+    grid-row: 3;
+  }
+
+  .recent-notes:nth-last-child(2) {
+    grid-area: 4 / 1 / 4 / 3;
+  }
+
+  .recent-notes:nth-last-child(1) {
+    grid-area: 5 / 1 / 4 / 3;
+  }
+
+  @media all and (max-width: $fullPageWidth) {
+    display: flex !important;
+  }
+}
+
+.index-page {
+  padding-top: 5rem;
+  font-family: "Menlo";
+
+  margin-left: auto;
+  margin-right: auto;
+  width: $pageWidth;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @media all and (max-width: $tabletBreakpoint) {
+    width: initial;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media all and (max-width: $mobileBreakpoint) {
+      flex-direction: column;
+    }
+  }
+
+  .expo-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .qr-code {
+      width: 75px;
+      height: 75px;
+    }
+    .scan {
+      font-size: 11;
+      line-height: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
