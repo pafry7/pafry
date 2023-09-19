@@ -1,16 +1,17 @@
 ---
 title: Boyer-Moore majority vote alghorithm
+date: 2023-09-17
 ---
 
 Published in 1981 by Robert S. Boyer and J Strother Moore is used for finding the majority element in a sequence.
 
 ```
-var majorityElement = function(nums) {
+function majorityElement(nums) {
    let counter = 0;
    let candidate;
    for(let i = 0; i < nums.length; i++){
        if(counter === 0){
-           candidate = nums[i]
+           candidate = nums[i];
            counter = 1;
        }else if(nums[i] === candidate){
            counter++

@@ -1,5 +1,6 @@
 ---
 title: Hybrid athlete
+date: 2023-09-12
 ---
 
 A combination of strength and endurance training that provides many short-term and long-term benefits. The goal is to maintain good health as long as possible by improving several metrics:
