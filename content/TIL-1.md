@@ -1,8 +1,8 @@
 ---
-title: TIL #1
+title: TIL-1
 date: 2023-09-27
 ---
-```
+```bash
 bunx npkill
 ```
 

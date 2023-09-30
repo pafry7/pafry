@@ -5,7 +5,7 @@ date: 2023-09-18
 
 Alghoritm is used for finding a contiguous subarray with the largest sum in one-dimensional array.
 
-```
+```js
 function maxSubarraySum(nums) {
   let sum = 0;
   let max = -Infinity;

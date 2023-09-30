@@ -14,7 +14,7 @@ Linking together information from many records, that are believed to belong to t
 
 This step involves transforming messy data into a usable format by cleaning and standardising it.
 
-```
+```python
 # Removes unwanted tokens, whitespace and brackets
 recordlinkage.preprocessing.clean()
 ```
@@ -33,7 +33,7 @@ In this stage, we create pairs of records (candidate links) while excluding obvi
 
 Source: https://uwaterloo.ca/networks-lab/blog/indexing-candidate-links-recordlinkage
 
-```
+```python
 # A window size of 1 returns the blocking index
 recordlinkage.index.SortedNeighbourhood(on="column_name",window=1)
 ```
@@ -48,7 +48,7 @@ Comparing record pairs with provided methods:
 - `geo` - comparing with geo algorithm. Computing the partial similarity between WHS84 coordinate values with selected algorithm: `step`, `linear`, `exp`, `gauss`, `squared`.
 - `date` - comparing with date algorithm.
 
-```
+```python
 # Custom methods may provide better results
 compare.compare(normed_lcss, "Affiliation", "name", name="lcss")   compare.compare(normed_fuzzy_lcss, "Affiliation", "name", name="fuzzy_lcss")
 ```

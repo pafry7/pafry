@@ -5,7 +5,7 @@ date: 2023-09-17
 
 Published in 1981 by Robert S. Boyer and J Strother Moore is used for finding the majority element in a sequence.
 
-```
+```js
 function majorityElement(nums) {
    let counter = 0;
    let candidate;

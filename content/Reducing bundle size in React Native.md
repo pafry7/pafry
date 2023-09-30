@@ -8,7 +8,7 @@ Developers with the web background starting with React Native can falsely assume
 Analyzing the bundle size can be done with [react-native-bundle-visualizer](https://github.com/IjzerenHein/react-native-bundle-visualizer)
 
 Using the following command (with flag `--expo true` if you are using Expo):
-```
+```bash
 npx react-native-bundle-visualizer
 ```
 will result in something similar to the screenshot provided below:

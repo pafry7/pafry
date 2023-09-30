@@ -23,7 +23,7 @@ Personally, I would extend it by:
 ### Server state
 
 There are different options depending on your stack, but generally I like using [Tanstack Query](https://tanstack.com/query/latest/). There is an excellent [blog](https://tkdodo.eu/blog/) explaining the concepts. One thing I like about that library is that `useQuery` hook accepts a promise. You can use it for different purposes, so the following example from Expo docs:
-```
+```jsx
 export default function App() {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -42,9 +42,9 @@ export default function App() {
     })();
   }, []);
 }
-  ```
-can be replaced with:
 ```
+can be replaced with:
+```jsx
 export default function App() {
   const { data, error } = useQuery(["location-permissions"], Location.requestForegroundPermissiosAsync);
   const { data: currentPosition, error: locationError } = useQuery(["current-position"], Location.gerCurrentPositionAsync);
