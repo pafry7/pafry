@@ -14,6 +14,7 @@ A combination of strength and endurance training that provides many short-term a
 ### Volume
 
 Strength training: 3-4x per week
+
 Endurance: [age in hours/month](https://x.com/nntaleb/status/1697797356777828673?s=20)
 
 ### Diet
@@ -67,6 +68,10 @@ Endurance: [age in hours/month](https://x.com/nntaleb/status/1697797356777828673
 |  Friday    | Lower strength + stability |    |
 |  Saturday  |   Zone 2   |     Upper strength      |
 |  Sunday    |    Zone 2 + VO2max    |           |
+
+### Goals
+- [ ] 5k sub 20
+- [ ] 100kg bench press + equivalent in deadlift and back squat
 
 
 ### People to follow
