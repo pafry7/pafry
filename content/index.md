@@ -22,10 +22,9 @@ Building delightful interfaces using React and React Native. Occasionally turnin
 
 **Now**
 
-- Working at [Alergeek Ventures](https://alergeek.ventures)
-- Making first steps in [podcasting](https://open.spotify.com/show/6BzNvsFTgE0BP67SESdLI2)
-- Maintaining [[digital garden]]
-- Reading [[books]]
+- Currently working at [Software Mansion](https://swmansion.com/) and building [Alergeek Ventures](https://alergeek.ventures) at night
+- 1/2 [Devspresso](https://www.youtube.com/@DevSpresso)
+- ~~Maintaining~~ [[digital garden]]
 - Training as a [[hybrid athlete]]
 
 **Contact**
